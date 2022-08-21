@@ -60,6 +60,12 @@ Tags need to be explicitly pushed to a remote server (more below).
 Practical aliases:
 `git config --global alias.pom 'push origin master'`
 
+### Squasing the last *n* commits
+Run `git rebase --interactive HEAD~n` (where *n* indicates how many commits from your history should be rebased).
+This will open an editor that displays the options for rebasing.
+To meld a newer commit into an older one, change `pick` to `squash` for the newer commit and close the editor.
+A new editor opens for editing the commit message.
+
 ### Branching and Merging
 `git branch <branch_name>` creates a new branch (a new pointer to the last commit on the branch you are currently on).
 `git log --decorate` shows you which branch you are currently on.
